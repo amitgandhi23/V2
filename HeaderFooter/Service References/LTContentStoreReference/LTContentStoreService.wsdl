@@ -1,0 +1,2210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LTContentStoreService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ILTContentStoreService_Endpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" />
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LTContentStore.Entities" />
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IContentStoreService_GetContentByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByID" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByID_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q1:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentGroups" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroups_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q2:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroupByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentGroupByName" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroupByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentGroupByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentGroupByName_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q3:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByTypeAndKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByTypeAndKey" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByTypeAndKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByTypeAndKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByTypeAndKey_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q4:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByKeys" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByKeys_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q5:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroup_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q6:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroupAndType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByGroupAndType" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroupAndType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByGroupAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetContentByGroupAndType_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q7:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GlossaryTerms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GlossaryTerms" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GlossaryTerms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GlossaryTermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GlossaryTerms_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q8:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRecommendedArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendedArticles" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRecommendedArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendedArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRecommendedArticles_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q9:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAppSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppSettings" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAppSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAppSettings_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q10:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SearchContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchContent" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SearchContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_MoreLikeThis_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoreLikeThis" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_MoreLikeThis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoreLikeThisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetSnippetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnippetById" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetSnippetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnippetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllTokens_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTokens" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllTokens_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTokensResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetActiveDisclosures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveDisclosures" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetActiveDisclosures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveDisclosuresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetDisclosure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisclosure" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetDisclosure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDisclosureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllPromos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPromos" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllPromos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPromosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetPromo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromo" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetPromo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexContentTypeToSolr_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexContentTypeToSolr" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexContentTypeToSolr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexContentTypeToSolrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexContentItemToSolr_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexContentItemToSolr" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexContentItemToSolr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexContentItemToSolrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexAllToSolr_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexAllToSolr" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReindexAllToSolr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReindexAllToSolrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_RemoveFromSolr_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromSolr" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_RemoveFromSolr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromSolrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DeleteVerificationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVerificationCode" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DeleteVerificationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVerificationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DeleteVerificationCode_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q11:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerByUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanOfficerByUID" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerByUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanOfficerByUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerByUID_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q12:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllLoanOfficerNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLoanOfficerNames" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllLoanOfficerNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLoanOfficerNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllLoanOfficerNames_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q13:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerBranchLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanOfficerBranchLocations" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerBranchLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanOfficerBranchLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetLoanOfficerBranchLocations_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q14:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficerProfile" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficerProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerProfile_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q15:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficerDirectoryEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficerDirectoryEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q16:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficer" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanOfficerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateLoanOfficer_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q17:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficerProfileIfNotExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoanOfficerProfileIfNotExists" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficerProfileIfNotExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoanOfficerProfileIfNotExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficerProfileIfNotExists_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q18:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficersFromNMLSFeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoanOfficersFromNMLSFeed" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficersFromNMLSFeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLoanOfficersFromNMLSFeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateLoanOfficersFromNMLSFeed_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q19:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendContactLoanOfficerEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendContactLoanOfficerEmail" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendContactLoanOfficerEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendContactLoanOfficerEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendContactLoanOfficerEmail_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q20:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendRequestReviewEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendRequestReviewEmail" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendRequestReviewEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendRequestReviewEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendRequestReviewEmail_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q21:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendLoanOfficerInvitationEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendLoanOfficerInvitationEmail" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendLoanOfficerInvitationEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendLoanOfficerInvitationEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendLoanOfficerInvitationEmail_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q22:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetFeaturedLoanOfficers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedLoanOfficers" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetFeaturedLoanOfficers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeaturedLoanOfficersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetFeaturedLoanOfficers_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q23:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementFeaturedLoanOfficerImpressionCount" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementFeaturedLoanOfficerImpressionCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q24:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByUserId_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q25:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKey" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKey_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q26:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeySorted_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKeySorted" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeySorted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKeySortedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeySorted_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q27:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewUpVote_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewUpVote" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewUpVote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewUpVoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewUpVote_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q28:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewDownVote_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewDownVote" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewDownVote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReviewDownVoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_ReviewDownVote_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q29:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeyFiltered_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKeyFiltered" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeyFiltered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsByLenderKeyFilteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsByLenderKeyFiltered_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q30:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviews" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviews_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q31:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsSorted_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsSorted" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsSorted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsSortedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsSorted_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q32:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpVoteReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpVoteReview" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpVoteReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpVoteReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpVoteReview_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q33:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DownVoteReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownVoteReview" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DownVoteReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownVoteReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_DownVoteReview_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q34:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsFiltered_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsFiltered" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsFiltered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsFilteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsFiltered_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q35:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendEmailIfNewReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailIfNewReviews" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendEmailIfNewReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailIfNewReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SendEmailIfNewReviews_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q36:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SaveContentReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContentReview" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SaveContentReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContentReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SaveContentReview_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q37:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceSubmission_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsForBazaarVoiceSubmission" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceSubmission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsForBazaarVoiceSubmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceSubmission_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q38:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceRetrieval_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsForBazaarVoiceRetrieval" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceRetrieval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsForBazaarVoiceRetrievalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewsForBazaarVoiceRetrieval_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q39:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewByReviewIdForMderation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewByReviewIdForMderation" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewByReviewIdForMderation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewByReviewIdForMderationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewByReviewIdForMderation_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q40:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRetriveCommentAndStatusFromBazarVoice" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRetriveCommentAndStatusFromBazarVoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q41:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewProductFromBazaarVoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewProductFromBazaarVoice" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewProductFromBazaarVoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewProductFromBazaarVoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewProductFromBazaarVoice_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q42:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewTextModerationStatusById_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewTextModerationStatusById" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewTextModerationStatusById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewTextModerationStatusByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewTextModerationStatusById_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q43:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRatingDistributionFromBazaarVoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRatingDistributionFromBazaarVoice" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRatingDistributionFromBazaarVoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRatingDistributionFromBazaarVoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateRatingDistributionFromBazaarVoice_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q44:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndAuthorizationUID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByProductIdAndAuthorizationUID" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndAuthorizationUID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByProductIdAndAuthorizationUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndAuthorizationUID_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q45:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByProductIdAndEmail" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewByProductIdAndEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetReviewByProductIdAndEmail_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q46:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewClientResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewClientResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReviewClientResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateReviewClientResponse_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q47:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingsByProductId" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingsByProductIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductId_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q48:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingsByProductIds" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingsByProductIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRatingsByProductIds_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q49:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetMyInvitees_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyInvitees" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetMyInvitees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyInviteesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SaveLoanOfficerInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoanOfficerInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_SaveLoanOfficerInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoanOfficerInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateInviteeClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInviteeClaim" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateInviteeClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInviteeClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetInviteeEmailByUniqueNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInviteeEmailByUniqueNo" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetInviteeEmailByUniqueNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInviteeEmailByUniqueNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateNumberOfViews_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNumberOfViews" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateNumberOfViews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNumberOfViewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateNumberOfViews_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q50:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionById" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionById_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q51:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllQuestionTopics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuestionTopics" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllQuestionTopics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQuestionTopicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAllQuestionTopics_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q52:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateQuestion_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q53:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateAnswerForQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateAnswerForQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateAnswerForQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateAnswerForQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateAnswerForQuestion_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q54:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateVoteForAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateVoteForAnswer" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateVoteForAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateVoteForAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateVoteForAnswer_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q55:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNotifications" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateNotifications_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q56:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateQuestionWithLoggedInUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuestionWithLoggedInUser" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateQuestionWithLoggedInUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQuestionWithLoggedInUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_UpdateQuestionWithLoggedInUser_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q57:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetVoteForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVoteForUser" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetVoteForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVoteForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetVoteForUser_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q58:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherAward_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTeacherAward" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherAward_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTeacherAwardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherAward_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q59:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAnswersForQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswersForQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAnswersForQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswersForQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetAnswersForQuestion_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q60:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestions_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q61:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetUnansweredQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnansweredQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetUnansweredQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnansweredQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetUnansweredQuestions_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q62:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsByState" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByState_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q63:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByTopic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsByTopic" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByTopic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsByTopicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsByTopic_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q64:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsAnsweredBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsAnsweredBy" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsAnsweredBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsAnsweredByResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsAnsweredBy_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q65:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRelatedQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelatedQuestions" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRelatedQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelatedQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetRelatedQuestions_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q66:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsNeedingAnswers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsNeedingAnswers" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsNeedingAnswers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionsNeedingAnswersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetQuestionsNeedingAnswers_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q67:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetParticipatingLoanOfficers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParticipatingLoanOfficers" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetParticipatingLoanOfficers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParticipatingLoanOfficersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetParticipatingLoanOfficers_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q68:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardForVoting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherAwardForVoting" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardForVoting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherAwardForVotingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardForVoting_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q69:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherVote_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTeacherVote" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherVote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTeacherVoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateTeacherVote_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q70:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardIdByFaceBookUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherAwardIdByFaceBookUserId" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardIdByFaceBookUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherAwardIdByFaceBookUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_GetTeacherAwardIdByFaceBookUserId_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q71:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateArticle" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUpdateArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContentStoreService_CreateUpdateArticle_TreeServiceFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/LendingTree.ServiceUtilities" name="detail" element="q72:TreeServiceFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="IContentStoreService">
+    <wsdl:operation name="GetContentByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByID" message="tns:IContentStoreService_GetContentByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByIDResponse" message="tns:IContentStoreService_GetContentByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByIDTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentByID_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroups" message="tns:IContentStoreService_GetContentGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroupsResponse" message="tns:IContentStoreService_GetContentGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroupsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentGroups_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentGroupByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroupByName" message="tns:IContentStoreService_GetContentGroupByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroupByNameResponse" message="tns:IContentStoreService_GetContentGroupByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentGroupByNameTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentGroupByName_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByTypeAndKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByTypeAndKey" message="tns:IContentStoreService_GetContentByTypeAndKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByTypeAndKeyResponse" message="tns:IContentStoreService_GetContentByTypeAndKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByTypeAndKeyTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentByTypeAndKey_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByKeys" message="tns:IContentStoreService_GetContentByKeys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByKeysResponse" message="tns:IContentStoreService_GetContentByKeys_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByKeysTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentByKeys_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroup" message="tns:IContentStoreService_GetContentByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroupResponse" message="tns:IContentStoreService_GetContentByGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroupTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentByGroup_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByGroupAndType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroupAndType" message="tns:IContentStoreService_GetContentByGroupAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroupAndTypeResponse" message="tns:IContentStoreService_GetContentByGroupAndType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetContentByGroupAndTypeTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetContentByGroupAndType_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GlossaryTerms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GlossaryTerms" message="tns:IContentStoreService_GlossaryTerms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GlossaryTermsResponse" message="tns:IContentStoreService_GlossaryTerms_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GlossaryTermsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GlossaryTerms_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendedArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetRecommendedArticles" message="tns:IContentStoreService_GetRecommendedArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetRecommendedArticlesResponse" message="tns:IContentStoreService_GetRecommendedArticles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetRecommendedArticlesTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetRecommendedArticles_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAppSettings" message="tns:IContentStoreService_GetAppSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAppSettingsResponse" message="tns:IContentStoreService_GetAppSettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetAppSettingsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetAppSettings_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchContent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SearchContent" message="tns:IContentStoreService_SearchContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SearchContentResponse" message="tns:IContentStoreService_SearchContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoreLikeThis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/MoreLikeThis" message="tns:IContentStoreService_MoreLikeThis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/MoreLikeThisResponse" message="tns:IContentStoreService_MoreLikeThis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSnippetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetSnippetById" message="tns:IContentStoreService_GetSnippetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetSnippetByIdResponse" message="tns:IContentStoreService_GetSnippetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTokens">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAllTokens" message="tns:IContentStoreService_GetAllTokens_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAllTokensResponse" message="tns:IContentStoreService_GetAllTokens_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveDisclosures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetActiveDisclosures" message="tns:IContentStoreService_GetActiveDisclosures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetActiveDisclosuresResponse" message="tns:IContentStoreService_GetActiveDisclosures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDisclosure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetDisclosure" message="tns:IContentStoreService_GetDisclosure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetDisclosureResponse" message="tns:IContentStoreService_GetDisclosure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPromos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAllPromos" message="tns:IContentStoreService_GetAllPromos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAllPromosResponse" message="tns:IContentStoreService_GetAllPromos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetPromo" message="tns:IContentStoreService_GetPromo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetPromoResponse" message="tns:IContentStoreService_GetPromo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReindexContentTypeToSolr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/ReindexContentTypeToSolr" message="tns:IContentStoreService_ReindexContentTypeToSolr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/ReindexContentTypeToSolrResponse" message="tns:IContentStoreService_ReindexContentTypeToSolr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReindexContentItemToSolr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/ReindexContentItemToSolr" message="tns:IContentStoreService_ReindexContentItemToSolr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/ReindexContentItemToSolrResponse" message="tns:IContentStoreService_ReindexContentItemToSolr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReindexAllToSolr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/ReindexAllToSolr" message="tns:IContentStoreService_ReindexAllToSolr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/ReindexAllToSolrResponse" message="tns:IContentStoreService_ReindexAllToSolr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromSolr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/RemoveFromSolr" message="tns:IContentStoreService_RemoveFromSolr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/RemoveFromSolrResponse" message="tns:IContentStoreService_RemoveFromSolr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVerificationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/DeleteVerificationCode" message="tns:IContentStoreService_DeleteVerificationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/DeleteVerificationCodeResponse" message="tns:IContentStoreService_DeleteVerificationCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/DeleteVerificationCodeTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_DeleteVerificationCode_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanOfficerByUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerByUID" message="tns:IContentStoreService_GetLoanOfficerByUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerByUIDResponse" message="tns:IContentStoreService_GetLoanOfficerByUID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerByUIDTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetLoanOfficerByUID_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoanOfficerNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAllLoanOfficerNames" message="tns:IContentStoreService_GetAllLoanOfficerNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAllLoanOfficerNamesResponse" message="tns:IContentStoreService_GetAllLoanOfficerNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetAllLoanOfficerNamesTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetAllLoanOfficerNames_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanOfficerBranchLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerBranchLocations" message="tns:IContentStoreService_GetLoanOfficerBranchLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerBranchLocationsResponse" message="tns:IContentStoreService_GetLoanOfficerBranchLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetLoanOfficerBranchLocationsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetLoanOfficerBranchLocations_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficerProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerProfile" message="tns:IContentStoreService_UpdateLoanOfficerProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerProfileResponse" message="tns:IContentStoreService_UpdateLoanOfficerProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerProfileTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateLoanOfficerProfile_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficerDirectoryEmailAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerDirectoryEmailAddress" message="tns:IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerDirectoryEmailAddressResponse" message="tns:IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerDirectoryEmailAddressTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateLoanOfficerDirectoryEmailAddress_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficer" message="tns:IContentStoreService_UpdateLoanOfficer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerResponse" message="tns:IContentStoreService_UpdateLoanOfficer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateLoanOfficerTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateLoanOfficer_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLoanOfficerProfileIfNotExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficerProfileIfNotExists" message="tns:IContentStoreService_CreateLoanOfficerProfileIfNotExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficerProfileIfNotExistsResponse" message="tns:IContentStoreService_CreateLoanOfficerProfileIfNotExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficerProfileIfNotExistsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateLoanOfficerProfileIfNotExists_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLoanOfficersFromNMLSFeed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficersFromNMLSFeed" message="tns:IContentStoreService_CreateLoanOfficersFromNMLSFeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficersFromNMLSFeedResponse" message="tns:IContentStoreService_CreateLoanOfficersFromNMLSFeed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateLoanOfficersFromNMLSFeedTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateLoanOfficersFromNMLSFeed_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendContactLoanOfficerEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SendContactLoanOfficerEmail" message="tns:IContentStoreService_SendContactLoanOfficerEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SendContactLoanOfficerEmailResponse" message="tns:IContentStoreService_SendContactLoanOfficerEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/SendContactLoanOfficerEmailTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_SendContactLoanOfficerEmail_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRequestReviewEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SendRequestReviewEmail" message="tns:IContentStoreService_SendRequestReviewEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SendRequestReviewEmailResponse" message="tns:IContentStoreService_SendRequestReviewEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/SendRequestReviewEmailTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_SendRequestReviewEmail_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendLoanOfficerInvitationEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SendLoanOfficerInvitationEmail" message="tns:IContentStoreService_SendLoanOfficerInvitationEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SendLoanOfficerInvitationEmailResponse" message="tns:IContentStoreService_SendLoanOfficerInvitationEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/SendLoanOfficerInvitationEmailTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_SendLoanOfficerInvitationEmail_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedLoanOfficers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetFeaturedLoanOfficers" message="tns:IContentStoreService_GetFeaturedLoanOfficers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetFeaturedLoanOfficersResponse" message="tns:IContentStoreService_GetFeaturedLoanOfficers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetFeaturedLoanOfficersTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetFeaturedLoanOfficers_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncrementFeaturedLoanOfficerImpressionCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/IncrementFeaturedLoanOfficerImpressionCount" message="tns:IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/IncrementFeaturedLoanOfficerImpressionCountResponse" message="tns:IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/IncrementFeaturedLoanOfficerImpressionCountTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_IncrementFeaturedLoanOfficerImpressionCount_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByUserId" message="tns:IContentStoreService_GetReviewByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByUserIdResponse" message="tns:IContentStoreService_GetReviewByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByUserIdTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewByUserId_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKey" message="tns:IContentStoreService_GetReviewsByLenderKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyResponse" message="tns:IContentStoreService_GetReviewsByLenderKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsByLenderKey_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKeySorted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeySorted" message="tns:IContentStoreService_GetReviewsByLenderKeySorted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeySortedResponse" message="tns:IContentStoreService_GetReviewsByLenderKeySorted_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeySortedTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsByLenderKeySorted_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReviewUpVote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/ReviewUpVote" message="tns:IContentStoreService_ReviewUpVote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/ReviewUpVoteResponse" message="tns:IContentStoreService_ReviewUpVote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/ReviewUpVoteTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_ReviewUpVote_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReviewDownVote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/ReviewDownVote" message="tns:IContentStoreService_ReviewDownVote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/ReviewDownVoteResponse" message="tns:IContentStoreService_ReviewDownVote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/ReviewDownVoteTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_ReviewDownVote_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKeyFiltered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyFiltered" message="tns:IContentStoreService_GetReviewsByLenderKeyFiltered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyFilteredResponse" message="tns:IContentStoreService_GetReviewsByLenderKeyFiltered_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyFilteredTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsByLenderKeyFiltered_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviews" message="tns:IContentStoreService_GetReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsResponse" message="tns:IContentStoreService_GetReviews_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviews_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsSorted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsSorted" message="tns:IContentStoreService_GetReviewsSorted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsSortedResponse" message="tns:IContentStoreService_GetReviewsSorted_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsSortedTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsSorted_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpVoteReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpVoteReview" message="tns:IContentStoreService_UpVoteReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpVoteReviewResponse" message="tns:IContentStoreService_UpVoteReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpVoteReviewTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpVoteReview_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownVoteReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/DownVoteReview" message="tns:IContentStoreService_DownVoteReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/DownVoteReviewResponse" message="tns:IContentStoreService_DownVoteReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/DownVoteReviewTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_DownVoteReview_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsFiltered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsFiltered" message="tns:IContentStoreService_GetReviewsFiltered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsFilteredResponse" message="tns:IContentStoreService_GetReviewsFiltered_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsFilteredTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsFiltered_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailIfNewReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SendEmailIfNewReviews" message="tns:IContentStoreService_SendEmailIfNewReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SendEmailIfNewReviewsResponse" message="tns:IContentStoreService_SendEmailIfNewReviews_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/SendEmailIfNewReviewsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_SendEmailIfNewReviews_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContentReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SaveContentReview" message="tns:IContentStoreService_SaveContentReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SaveContentReviewResponse" message="tns:IContentStoreService_SaveContentReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/SaveContentReviewTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_SaveContentReview_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsForBazaarVoiceSubmission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceSubmission" message="tns:IContentStoreService_GetReviewsForBazaarVoiceSubmission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceSubmissionResponse" message="tns:IContentStoreService_GetReviewsForBazaarVoiceSubmission_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceSubmissionTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsForBazaarVoiceSubmission_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsForBazaarVoiceRetrieval">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceRetrieval" message="tns:IContentStoreService_GetReviewsForBazaarVoiceRetrieval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceRetrievalResponse" message="tns:IContentStoreService_GetReviewsForBazaarVoiceRetrieval_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceRetrievalTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewsForBazaarVoiceRetrieval_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewByReviewIdForMderation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewByReviewIdForMderation" message="tns:IContentStoreService_UpdateReviewByReviewIdForMderation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewByReviewIdForMderationResponse" message="tns:IContentStoreService_UpdateReviewByReviewIdForMderation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewByReviewIdForMderationTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateReviewByReviewIdForMderation_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRetriveCommentAndStatusFromBazarVoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRetriveCommentAndStatusFromBazarVoice" message="tns:IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRetriveCommentAndStatusFromBazarVoiceResponse" message="tns:IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRetriveCommentAndStatusFromBazarVoiceTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateRetriveCommentAndStatusFromBazarVoice_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewProductFromBazaarVoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewProductFromBazaarVoice" message="tns:IContentStoreService_UpdateReviewProductFromBazaarVoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewProductFromBazaarVoiceResponse" message="tns:IContentStoreService_UpdateReviewProductFromBazaarVoice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewProductFromBazaarVoiceTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateReviewProductFromBazaarVoice_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewTextModerationStatusById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewTextModerationStatusById" message="tns:IContentStoreService_UpdateReviewTextModerationStatusById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewTextModerationStatusByIdResponse" message="tns:IContentStoreService_UpdateReviewTextModerationStatusById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewTextModerationStatusByIdTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateReviewTextModerationStatusById_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRatingDistributionFromBazaarVoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRatingDistributionFromBazaarVoice" message="tns:IContentStoreService_UpdateRatingDistributionFromBazaarVoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRatingDistributionFromBazaarVoiceResponse" message="tns:IContentStoreService_UpdateRatingDistributionFromBazaarVoice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateRatingDistributionFromBazaarVoiceTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateRatingDistributionFromBazaarVoice_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByProductIdAndAuthorizationUID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndAuthorizationUID" message="tns:IContentStoreService_GetReviewByProductIdAndAuthorizationUID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndAuthorizationUIDResponse" message="tns:IContentStoreService_GetReviewByProductIdAndAuthorizationUID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndAuthorizationUIDTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewByProductIdAndAuthorizationUID_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByProductIdAndEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndEmail" message="tns:IContentStoreService_GetReviewByProductIdAndEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndEmailResponse" message="tns:IContentStoreService_GetReviewByProductIdAndEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndEmailTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetReviewByProductIdAndEmail_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewClientResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewClientResponse" message="tns:IContentStoreService_UpdateReviewClientResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewClientResponseResponse" message="tns:IContentStoreService_UpdateReviewClientResponse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateReviewClientResponseTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateReviewClientResponse_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingsByProductId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductId" message="tns:IContentStoreService_GetRatingsByProductId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductIdResponse" message="tns:IContentStoreService_GetRatingsByProductId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductIdTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetRatingsByProductId_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingsByProductIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductIds" message="tns:IContentStoreService_GetRatingsByProductIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductIdsResponse" message="tns:IContentStoreService_GetRatingsByProductIds_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetRatingsByProductIdsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetRatingsByProductIds_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyInvitees">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetMyInvitees" message="tns:IContentStoreService_GetMyInvitees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetMyInviteesResponse" message="tns:IContentStoreService_GetMyInvitees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoanOfficerInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/SaveLoanOfficerInvitation" message="tns:IContentStoreService_SaveLoanOfficerInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/SaveLoanOfficerInvitationResponse" message="tns:IContentStoreService_SaveLoanOfficerInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInviteeClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateInviteeClaim" message="tns:IContentStoreService_UpdateInviteeClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateInviteeClaimResponse" message="tns:IContentStoreService_UpdateInviteeClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInviteeEmailByUniqueNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetInviteeEmailByUniqueNo" message="tns:IContentStoreService_GetInviteeEmailByUniqueNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetInviteeEmailByUniqueNoResponse" message="tns:IContentStoreService_GetInviteeEmailByUniqueNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNumberOfViews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateNumberOfViews" message="tns:IContentStoreService_UpdateNumberOfViews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateNumberOfViewsResponse" message="tns:IContentStoreService_UpdateNumberOfViews_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateNumberOfViewsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateNumberOfViews_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionById" message="tns:IContentStoreService_GetQuestionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionByIdResponse" message="tns:IContentStoreService_GetQuestionById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionByIdTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestionById_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuestionTopics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAllQuestionTopics" message="tns:IContentStoreService_GetAllQuestionTopics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAllQuestionTopicsResponse" message="tns:IContentStoreService_GetAllQuestionTopics_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetAllQuestionTopicsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetAllQuestionTopics_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateQuestion" message="tns:IContentStoreService_CreateQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateQuestionResponse" message="tns:IContentStoreService_CreateQuestion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateQuestionTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateQuestion_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateAnswerForQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateAnswerForQuestion" message="tns:IContentStoreService_CreateUpdateAnswerForQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateAnswerForQuestionResponse" message="tns:IContentStoreService_CreateUpdateAnswerForQuestion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateAnswerForQuestionTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateUpdateAnswerForQuestion_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateVoteForAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateVoteForAnswer" message="tns:IContentStoreService_CreateUpdateVoteForAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateVoteForAnswerResponse" message="tns:IContentStoreService_CreateUpdateVoteForAnswer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateVoteForAnswerTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateUpdateVoteForAnswer_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNotifications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateNotifications" message="tns:IContentStoreService_CreateNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateNotificationsResponse" message="tns:IContentStoreService_CreateNotifications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateNotificationsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateNotifications_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuestionWithLoggedInUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/UpdateQuestionWithLoggedInUser" message="tns:IContentStoreService_UpdateQuestionWithLoggedInUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/UpdateQuestionWithLoggedInUserResponse" message="tns:IContentStoreService_UpdateQuestionWithLoggedInUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/UpdateQuestionWithLoggedInUserTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_UpdateQuestionWithLoggedInUser_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoteForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetVoteForUser" message="tns:IContentStoreService_GetVoteForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetVoteForUserResponse" message="tns:IContentStoreService_GetVoteForUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetVoteForUserTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetVoteForUser_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTeacherAward">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherAward" message="tns:IContentStoreService_CreateTeacherAward_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherAwardResponse" message="tns:IContentStoreService_CreateTeacherAward_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherAwardTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateTeacherAward_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswersForQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetAnswersForQuestion" message="tns:IContentStoreService_GetAnswersForQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetAnswersForQuestionResponse" message="tns:IContentStoreService_GetAnswersForQuestion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetAnswersForQuestionTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetAnswersForQuestion_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestions" message="tns:IContentStoreService_GetQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsResponse" message="tns:IContentStoreService_GetQuestions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestions_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnansweredQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetUnansweredQuestions" message="tns:IContentStoreService_GetUnansweredQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetUnansweredQuestionsResponse" message="tns:IContentStoreService_GetUnansweredQuestions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetUnansweredQuestionsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetUnansweredQuestions_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByState" message="tns:IContentStoreService_GetQuestionsByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByStateResponse" message="tns:IContentStoreService_GetQuestionsByState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByStateTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestionsByState_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsByTopic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByTopic" message="tns:IContentStoreService_GetQuestionsByTopic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByTopicResponse" message="tns:IContentStoreService_GetQuestionsByTopic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsByTopicTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestionsByTopic_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsAnsweredBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsAnsweredBy" message="tns:IContentStoreService_GetQuestionsAnsweredBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsAnsweredByResponse" message="tns:IContentStoreService_GetQuestionsAnsweredBy_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsAnsweredByTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestionsAnsweredBy_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetRelatedQuestions" message="tns:IContentStoreService_GetRelatedQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetRelatedQuestionsResponse" message="tns:IContentStoreService_GetRelatedQuestions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetRelatedQuestionsTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetRelatedQuestions_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsNeedingAnswers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsNeedingAnswers" message="tns:IContentStoreService_GetQuestionsNeedingAnswers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsNeedingAnswersResponse" message="tns:IContentStoreService_GetQuestionsNeedingAnswers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetQuestionsNeedingAnswersTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetQuestionsNeedingAnswers_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParticipatingLoanOfficers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetParticipatingLoanOfficers" message="tns:IContentStoreService_GetParticipatingLoanOfficers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetParticipatingLoanOfficersResponse" message="tns:IContentStoreService_GetParticipatingLoanOfficers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetParticipatingLoanOfficersTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetParticipatingLoanOfficers_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacherAwardForVoting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardForVoting" message="tns:IContentStoreService_GetTeacherAwardForVoting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardForVotingResponse" message="tns:IContentStoreService_GetTeacherAwardForVoting_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardForVotingTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetTeacherAwardForVoting_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTeacherVote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherVote" message="tns:IContentStoreService_CreateTeacherVote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherVoteResponse" message="tns:IContentStoreService_CreateTeacherVote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateTeacherVoteTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateTeacherVote_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacherAwardIdByFaceBookUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardIdByFaceBookUserId" message="tns:IContentStoreService_GetTeacherAwardIdByFaceBookUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardIdByFaceBookUserIdResponse" message="tns:IContentStoreService_GetTeacherAwardIdByFaceBookUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/GetTeacherAwardIdByFaceBookUserIdTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_GetTeacherAwardIdByFaceBookUserId_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateArticle" message="tns:IContentStoreService_CreateUpdateArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateArticleResponse" message="tns:IContentStoreService_CreateUpdateArticle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContentStoreService/CreateUpdateArticleTreeServiceFaultExceptionFault" name="TreeServiceFaultExceptionFault" message="tns:IContentStoreService_CreateUpdateArticle_TreeServiceFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ILTContentStoreService_Endpoint" type="tns:IContentStoreService">
+    <wsp:PolicyReference URI="#ILTContentStoreService_Endpoint_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContentByID">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentGroups">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentGroupByName">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentGroupByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByTypeAndKey">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentByTypeAndKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByKeys">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentByKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByGroup">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentByGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByGroupAndType">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetContentByGroupAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GlossaryTerms">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GlossaryTerms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendedArticles">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetRecommendedArticles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppSettings">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAppSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchContent">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SearchContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoreLikeThis">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/MoreLikeThis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSnippetById">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetSnippetById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTokens">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAllTokens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveDisclosures">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetActiveDisclosures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDisclosure">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetDisclosure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPromos">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAllPromos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromo">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetPromo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReindexContentTypeToSolr">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/ReindexContentTypeToSolr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReindexContentItemToSolr">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/ReindexContentItemToSolr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReindexAllToSolr">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/ReindexAllToSolr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromSolr">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/RemoveFromSolr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVerificationCode">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/DeleteVerificationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanOfficerByUID">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetLoanOfficerByUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoanOfficerNames">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAllLoanOfficerNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanOfficerBranchLocations">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetLoanOfficerBranchLocations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficerProfile">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateLoanOfficerProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficerDirectoryEmailAddress">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateLoanOfficerDirectoryEmailAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanOfficer">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateLoanOfficer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLoanOfficerProfileIfNotExists">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateLoanOfficerProfileIfNotExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLoanOfficersFromNMLSFeed">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateLoanOfficersFromNMLSFeed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendContactLoanOfficerEmail">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SendContactLoanOfficerEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendRequestReviewEmail">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SendRequestReviewEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendLoanOfficerInvitationEmail">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SendLoanOfficerInvitationEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeaturedLoanOfficers">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetFeaturedLoanOfficers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IncrementFeaturedLoanOfficerImpressionCount">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/IncrementFeaturedLoanOfficerImpressionCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByUserId">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewByUserId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKey">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsByLenderKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKeySorted">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeySorted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewUpVote">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/ReviewUpVote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewDownVote">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/ReviewDownVote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsByLenderKeyFiltered">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsByLenderKeyFiltered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsSorted">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsSorted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpVoteReview">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpVoteReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownVoteReview">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/DownVoteReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsFiltered">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsFiltered" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailIfNewReviews">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SendEmailIfNewReviews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContentReview">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SaveContentReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsForBazaarVoiceSubmission">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceSubmission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewsForBazaarVoiceRetrieval">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewsForBazaarVoiceRetrieval" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewByReviewIdForMderation">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateReviewByReviewIdForMderation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRetriveCommentAndStatusFromBazarVoice">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateRetriveCommentAndStatusFromBazarVoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewProductFromBazaarVoice">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateReviewProductFromBazaarVoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewTextModerationStatusById">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateReviewTextModerationStatusById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRatingDistributionFromBazaarVoice">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateRatingDistributionFromBazaarVoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByProductIdAndAuthorizationUID">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndAuthorizationUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviewByProductIdAndEmail">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetReviewByProductIdAndEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReviewClientResponse">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateReviewClientResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingsByProductId">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetRatingsByProductId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingsByProductIds">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetRatingsByProductIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyInvitees">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetMyInvitees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoanOfficerInvitation">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/SaveLoanOfficerInvitation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInviteeClaim">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateInviteeClaim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInviteeEmailByUniqueNo">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetInviteeEmailByUniqueNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNumberOfViews">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateNumberOfViews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionById">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestionById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQuestionTopics">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAllQuestionTopics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateQuestion">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateAnswerForQuestion">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateUpdateAnswerForQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateVoteForAnswer">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateUpdateVoteForAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNotifications">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQuestionWithLoggedInUser">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/UpdateQuestionWithLoggedInUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoteForUser">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetVoteForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTeacherAward">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateTeacherAward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswersForQuestion">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetAnswersForQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestions">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnansweredQuestions">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetUnansweredQuestions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsByState">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestionsByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsByTopic">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestionsByTopic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsAnsweredBy">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestionsAnsweredBy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedQuestions">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetRelatedQuestions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionsNeedingAnswers">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetQuestionsNeedingAnswers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetParticipatingLoanOfficers">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetParticipatingLoanOfficers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacherAwardForVoting">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetTeacherAwardForVoting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTeacherVote">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateTeacherVote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacherAwardIdByFaceBookUserId">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/GetTeacherAwardIdByFaceBookUserId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUpdateArticle">
+      <soap12:operation soapAction="http://tempuri.org/IContentStoreService/CreateUpdateArticle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="TreeServiceFaultExceptionFault">
+        <soap12:fault use="literal" name="TreeServiceFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LTContentStoreService">
+    <wsdl:port name="ILTContentStoreService_Endpoint" binding="tns:ILTContentStoreService_Endpoint">
+      <soap12:address location="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

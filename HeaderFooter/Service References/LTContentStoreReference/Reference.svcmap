@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="04c1e4f7-8472-4607-b4cb-770e95833068" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LTContentStore.xsd" MetadataType="Schema" ID="813cbdf9-3edf-4030-ba03-476b9c6e0802" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd3" />
+    <MetadataFile FileName="LTContentStore1.xsd" MetadataType="Schema" ID="1315b480-9f53-46b3-9f0f-0915e35dd3f4" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd2" />
+    <MetadataFile FileName="LTContentStore2.xsd" MetadataType="Schema" ID="f848e444-d52c-4fa4-bb0a-3eba3fdd0cd5" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd5" />
+    <MetadataFile FileName="LTContentStore3.xsd" MetadataType="Schema" ID="4bc6f4a6-c24e-412b-8329-20b1df7d87d8" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd4" />
+    <MetadataFile FileName="LTContentStore.disco" MetadataType="Disco" ID="9000599f-1f39-4778-96cf-bf46e6d6981c" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?disco" />
+    <MetadataFile FileName="LTContentStoreService.wsdl" MetadataType="Wsdl" ID="c38cd574-0311-400e-927a-240b2b30790b" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?wsdl" />
+    <MetadataFile FileName="LTContentStore4.xsd" MetadataType="Schema" ID="1609df0f-9081-4fa7-a3df-d2e9135873f0" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd1" />
+    <MetadataFile FileName="LTContentStore5.xsd" MetadataType="Schema" ID="6592944c-261e-4626-bacf-826f74a745e5" SourceId="1" SourceUrl="http://iws.dev.tree.com/LTContentStoreService/LTContentStore.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
